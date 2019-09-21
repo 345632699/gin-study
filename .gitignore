@@ -2,5 +2,6 @@
 .DS_Store
 
 runtime/*
-!runtime/qrcode/bg.jpg
+!runtime/qrcode/bg3x.jpg
+!runtime/qrcode/flag3x.jpg
 !runtime/fonts

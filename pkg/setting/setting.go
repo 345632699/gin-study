@@ -20,6 +20,7 @@ type App struct {
 
 	ExportSavePath string
 	QrCodeSavePath string
+	ProjectImgSavePath string
 	FontSavePath   string
 
 	LogSavePath string

@@ -46,6 +46,10 @@ func GetQrCodeFullPath() string {
 	return setting.AppSetting.RuntimeRootPath + setting.AppSetting.QrCodeSavePath
 }
 
+func GetProjectFullPath() string {
+	return setting.AppSetting.RuntimeRootPath + setting.AppSetting.ProjectImgSavePath
+}
+
 // GetQrCodeFullUrl get the full access path
 func GetQrCodeFullUrl(name string) string {
 	return setting.AppSetting.PrefixUrl + "/" + GetQrCodePath() + name
