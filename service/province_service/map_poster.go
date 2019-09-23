@@ -10,11 +10,11 @@ import (
 
 	"github.com/golang/freetype"
 
+	"github.com/EDDYCJY/go-gin-example/models"
 	"github.com/EDDYCJY/go-gin-example/pkg/file"
 	"github.com/EDDYCJY/go-gin-example/pkg/qrcode"
 	"github.com/EDDYCJY/go-gin-example/pkg/setting"
 	"image/png"
-	"github.com/EDDYCJY/go-gin-example/models"
 	"strconv"
 )
 
@@ -52,7 +52,7 @@ func (a *MapPoster) OpenMergedImage(path string) (*os.File, error) {
 }
 
 type MapPosterBg struct {
-	Name      string
+	Name string
 	*MapPoster
 	*Rect
 	*Pt
@@ -145,8 +145,11 @@ func (a *MapPosterBg) DrawPoster(d *DrawText, fontName string, regularFontName s
 	fc1.SetDst(d.JPG)
 	fc1.SetSrc(image.Black)
 	_, err = fc1.DrawString("我是第"+strconv.Itoa(d.CountRecord+1)+"位点亮的建设者，我", freetype.Pt(d.X1, d.Y1))
-	_, err = fc1.DrawString("在"+strconv.Itoa(d.CountProvince)+"省留下了足迹，见证超级", freetype.Pt(d.X1, d.Y1+60))
-	_, err = fc1.DrawString("工程的成长", freetype.Pt(d.X1, d.Y1+120))
+	_, err = fc1.DrawString("在"+strconv.Itoa(d.CountProvince)+"（自治区、直辖市）留", freetype.Pt(d.X1, d.Y1+60))
+	_, err = fc1.DrawString("下了足迹，见证超级工程的成长", freetype.Pt(d.X1, d.Y1+120))
+	if err != nil {
+		return err
+	}
 	if err != nil {
 		return err
 	}
