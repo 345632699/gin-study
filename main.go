@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"gin-study/routers"
 	"log"
 	"net/http"
 
@@ -11,7 +12,6 @@ import (
 	"github.com/EDDYCJY/go-gin-example/pkg/gredis"
 	"github.com/EDDYCJY/go-gin-example/pkg/logging"
 	"github.com/EDDYCJY/go-gin-example/pkg/setting"
-	"github.com/EDDYCJY/go-gin-example/routers"
 	"github.com/EDDYCJY/go-gin-example/pkg/util"
 )
 

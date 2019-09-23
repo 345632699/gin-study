@@ -1,21 +1,21 @@
 package api
 
 import (
-	"github.com/EDDYCJY/go-gin-example/pkg/app"
-	"net/http"
-	"github.com/EDDYCJY/go-gin-example/pkg/e"
-	"github.com/gin-gonic/gin"
 	"fmt"
+	models2 "gin-study/models"
+	"gin-study/service/province_service"
+	"github.com/EDDYCJY/go-gin-example/pkg/app"
+	"github.com/EDDYCJY/go-gin-example/pkg/e"
 	"github.com/EDDYCJY/go-gin-example/pkg/qrcode"
-	"time"
-	"strconv"
 	"github.com/boombuler/barcode/qr"
-	"github.com/EDDYCJY/go-gin-example/service/province_service"
-	"github.com/EDDYCJY/go-gin-example/models"
+	"github.com/gin-gonic/gin"
+	"net/http"
+	"strconv"
+	"time"
 )
 
 type provinceData struct {
-	Province [] string `json:"province"`
+	Province []string `json:"province"`
 }
 
 type provinceJson struct {
@@ -38,8 +38,7 @@ func CreatePoster(c *gin.Context) {
 		fmt.Println(province)
 	}
 
-	provinceService := province_service.Province{
-	}
+	provinceService := province_service.Province{}
 	provinces, err := provinceService.GetAll(provinceList.Province)
 	if err != nil {
 		appG.Response(http.StatusInternalServerError, e.ERROR_GET_TAGS_FAIL, nil)
@@ -89,15 +88,14 @@ func GetProvince(c *gin.Context) {
 	if err != nil {
 		appG.Response(500, e.ERROR, err)
 	}
-	provinceService := province_service.Province{
-	}
+	provinceService := province_service.Province{}
 	provinceResult, err := provinceService.GetProvinceByName(province.Name)
 	if err != nil {
 		appG.Response(http.StatusInternalServerError, e.ERROR_GET_TAGS_FAIL, nil)
 		return
 	}
 
-	appG.Response(http.StatusOK, e.SUCCESS, map[string]models.Province{
+	appG.Response(http.StatusOK, e.SUCCESS, map[string]models2.Province{
 		"province": provinceResult,
 	})
 }

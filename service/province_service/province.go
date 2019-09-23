@@ -1,7 +1,7 @@
 package province_service
 
 import (
-	"github.com/EDDYCJY/go-gin-example/models"
+	"gin-study/models"
 )
 
 type Province struct {
