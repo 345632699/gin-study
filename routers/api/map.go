@@ -70,6 +70,7 @@ func CreatePoster(c *gin.Context) {
 
 	_, filePath, err := mapPosterBgService.Generate()
 	if err != nil {
+		fmt.Println(err)
 		appG.Response(http.StatusInternalServerError, e.ERROR_GEN_ARTICLE_POSTER_FAIL, nil)
 		return
 	}
