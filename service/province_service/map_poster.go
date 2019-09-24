@@ -144,9 +144,9 @@ func (a *MapPosterBg) DrawPoster(d *DrawText, fontName string, regularFontName s
 	fc1.SetClip(d.JPG.Bounds())
 	fc1.SetDst(d.JPG)
 	fc1.SetSrc(image.Black)
-	_, err = fc1.DrawString("我是第"+strconv.Itoa(d.CountRecord+1)+"位点亮的建设者，我", freetype.Pt(d.X1, d.Y1))
-	_, err = fc1.DrawString("在"+strconv.Itoa(d.CountProvince)+"（自治区、直辖市）留", freetype.Pt(d.X1, d.Y1+60))
-	_, err = fc1.DrawString("下了足迹，见证超级工程的成长", freetype.Pt(d.X1, d.Y1+120))
+	_, err = fc1.DrawString("我是第"+strconv.Itoa(d.CountRecord+1)+"位点亮的建设者", freetype.Pt(d.X1, d.Y1))
+	_, err = fc1.DrawString("我在"+strconv.Itoa(d.CountProvince)+"个省（自治区、直辖市）", freetype.Pt(d.X1, d.Y1+60))
+	_, err = fc1.DrawString("见证了重点工程的成长", freetype.Pt(d.X1, d.Y1+120))
 	if err != nil {
 		return err
 	}
