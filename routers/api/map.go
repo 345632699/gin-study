@@ -2,11 +2,12 @@ package api
 
 import (
 	"fmt"
-	models2 "gin-study/models"
+	"gin-study/models"
+	"gin-study/pkg/app"
+	"gin-study/pkg/e"
+	"gin-study/pkg/qrcode"
 	"gin-study/service/province_service"
-	"github.com/EDDYCJY/go-gin-example/pkg/app"
-	"github.com/EDDYCJY/go-gin-example/pkg/e"
-	"github.com/EDDYCJY/go-gin-example/pkg/qrcode"
+
 	"github.com/boombuler/barcode/qr"
 	"github.com/gin-gonic/gin"
 	"net/http"
@@ -95,7 +96,7 @@ func GetProvince(c *gin.Context) {
 		return
 	}
 
-	appG.Response(http.StatusOK, e.SUCCESS, map[string]models2.Province{
+	appG.Response(http.StatusOK, e.SUCCESS, map[string]models.Province{
 		"province": provinceResult,
 	})
 }

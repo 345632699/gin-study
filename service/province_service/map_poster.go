@@ -2,6 +2,9 @@ package province_service
 
 import (
 	"gin-study/models"
+	"gin-study/pkg/file"
+	"gin-study/pkg/qrcode"
+	"gin-study/pkg/setting"
 	"image"
 	"image/draw"
 	"image/jpeg"
@@ -11,9 +14,6 @@ import (
 
 	"github.com/golang/freetype"
 
-	"github.com/EDDYCJY/go-gin-example/pkg/file"
-	"github.com/EDDYCJY/go-gin-example/pkg/qrcode"
-	"github.com/EDDYCJY/go-gin-example/pkg/setting"
 	"image/png"
 	"strconv"
 )

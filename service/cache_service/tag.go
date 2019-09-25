@@ -1,10 +1,9 @@
 package cache_service
 
 import (
+	"gin-study/pkg/e"
 	"strconv"
 	"strings"
-
-	"github.com/EDDYCJY/go-gin-example/pkg/e"
 )
 
 type Tag struct {

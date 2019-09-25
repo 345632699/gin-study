@@ -11,6 +11,7 @@ require (
 	github.com/dgrijalva/jwt-go v3.1.0+incompatible
 	github.com/gin-gonic/gin v1.3.0
 	github.com/go-ini/ini v1.32.1-0.20180214101753-32e4be5f41bb
+	github.com/go-sql-driver/mysql v1.4.1-0.20190510102335-877a9775f068
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0
 	github.com/gomodule/redigo v2.0.1-0.20180401191855-9352ab68be13+incompatible
 	github.com/jinzhu/gorm v0.0.0-20180213101209-6e1387b44c64

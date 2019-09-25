@@ -1,21 +1,19 @@
 package routers
 
 import (
-	qrcode2 "gin-study/pkg/qrcode"
-	api2 "gin-study/routers/api"
+	"gin-study/pkg/export"
+	"gin-study/pkg/qrcode"
+	"gin-study/pkg/upload"
+	"gin-study/routers/api"
+
 	"net/http"
 
 	"github.com/gin-gonic/gin"
 
-	_ "github.com/EDDYCJY/go-gin-example/docs"
 	"github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
 
 	"fmt"
-	"github.com/EDDYCJY/go-gin-example/pkg/export"
-	"github.com/EDDYCJY/go-gin-example/pkg/qrcode"
-	"github.com/EDDYCJY/go-gin-example/pkg/upload"
-	"github.com/EDDYCJY/go-gin-example/routers/api"
 	"strings"
 )
 
@@ -28,14 +26,14 @@ func InitRouter() *gin.Engine {
 	r.StaticFS("/export", http.Dir(export.GetExcelFullPath()))
 	r.StaticFS("/upload/images", http.Dir(upload.GetImageFullPath()))
 	r.StaticFS("/qrcode", http.Dir(qrcode.GetQrCodeFullPath()))
-	r.StaticFS("/project/img", http.Dir(qrcode2.GetProjectFullPath()))
+	r.StaticFS("/project/img", http.Dir(qrcode.GetProjectFullPath()))
 
 	r.GET("/auth", api.GetAuth)
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	r.POST("/upload", api.UploadImage)
 
-	r.POST("/generatePoster", api2.CreatePoster)
-	r.POST("/getProvince", api2.GetProvince)
+	r.POST("/generatePoster", api.CreatePoster)
+	r.POST("/getProvince", api.GetProvince)
 
 	return r
 }

@@ -2,12 +2,12 @@ package models
 
 import (
 	"fmt"
+	"gin-study/pkg/setting"
 	"log"
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 
-	"github.com/EDDYCJY/go-gin-example/pkg/setting"
 	"time"
 )
 

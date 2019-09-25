@@ -2,17 +2,16 @@ package main
 
 import (
 	"fmt"
+	"gin-study/models"
+	"gin-study/pkg/gredis"
+	"gin-study/pkg/logging"
+	"gin-study/pkg/setting"
+	"gin-study/pkg/util"
 	"gin-study/routers"
 	"log"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-
-	"github.com/EDDYCJY/go-gin-example/models"
-	"github.com/EDDYCJY/go-gin-example/pkg/gredis"
-	"github.com/EDDYCJY/go-gin-example/pkg/logging"
-	"github.com/EDDYCJY/go-gin-example/pkg/setting"
-	"github.com/EDDYCJY/go-gin-example/pkg/util"
 )
 
 func init() {
