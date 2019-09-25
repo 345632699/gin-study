@@ -1,14 +1,13 @@
 package api
 
 import (
+	"gin-study/pkg/app"
+	"gin-study/pkg/e"
+	"gin-study/pkg/logging"
+	"gin-study/pkg/upload"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-
-	"github.com/EDDYCJY/go-gin-example/pkg/app"
-	"github.com/EDDYCJY/go-gin-example/pkg/e"
-	"github.com/EDDYCJY/go-gin-example/pkg/logging"
-	"github.com/EDDYCJY/go-gin-example/pkg/upload"
 )
 
 // @Summary Import Image

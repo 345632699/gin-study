@@ -1,15 +1,14 @@
 package api
 
 import (
+	"gin-study/pkg/app"
+	"gin-study/pkg/e"
+	"gin-study/pkg/util"
+	"gin-study/service/auth_service"
 	"net/http"
 
 	"github.com/astaxie/beego/validation"
 	"github.com/gin-gonic/gin"
-
-	"github.com/EDDYCJY/go-gin-example/pkg/app"
-	"github.com/EDDYCJY/go-gin-example/pkg/e"
-	"github.com/EDDYCJY/go-gin-example/pkg/util"
-	"github.com/EDDYCJY/go-gin-example/service/auth_service"
 )
 
 type auth struct {
