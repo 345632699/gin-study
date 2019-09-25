@@ -1,9 +1,8 @@
 package app
 
 import (
+	"gin-study/pkg/logging"
 	"github.com/astaxie/beego/validation"
-
-	"github.com/EDDYCJY/go-gin-example/pkg/logging"
 )
 
 // MarkErrors logs error logs

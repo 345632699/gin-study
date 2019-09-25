@@ -1,15 +1,13 @@
 package qrcode
 
 import (
-	setting2 "gin-study/pkg/setting"
+	"gin-study/pkg/file"
+	"gin-study/pkg/setting"
+	"gin-study/pkg/util"
 	"image/jpeg"
 
 	"github.com/boombuler/barcode"
 	"github.com/boombuler/barcode/qr"
-
-	"github.com/EDDYCJY/go-gin-example/pkg/file"
-	"github.com/EDDYCJY/go-gin-example/pkg/setting"
-	"github.com/EDDYCJY/go-gin-example/pkg/util"
 )
 
 type QrCode struct {
@@ -48,7 +46,7 @@ func GetQrCodeFullPath() string {
 }
 
 func GetProjectFullPath() string {
-	return setting.AppSetting.RuntimeRootPath + setting2.AppSetting.ProjectImgSavePath
+	return setting.AppSetting.RuntimeRootPath + setting.AppSetting.ProjectImgSavePath
 }
 
 // GetQrCodeFullUrl get the full access path
