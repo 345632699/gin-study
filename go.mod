@@ -9,7 +9,7 @@ require (
 	github.com/astaxie/beego v1.9.3-0.20171218111859-f16688817aa4
 	github.com/boombuler/barcode v1.0.1-0.20180315051053-3c06908149f7
 	github.com/dgrijalva/jwt-go v3.1.0+incompatible
-	github.com/gin-gonic/gin v1.3.0
+	github.com/gin-gonic/gin v1.7.7
 	github.com/go-ini/ini v1.32.1-0.20180214101753-32e4be5f41bb
 	github.com/go-sql-driver/mysql v1.4.1 // indirect
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0
@@ -20,6 +20,5 @@ require (
 	github.com/swaggo/gin-swagger v1.0.1-0.20190110070702-0c6fcfd3c7f3
 	github.com/swaggo/swag v1.4.0
 	golang.org/x/image v0.0.0-20190910094157-69e4b8554b2a // indirect
-	golang.org/x/sys v0.0.0-20190922100055-0a153f010e69 // indirect
 	gopkg.in/ini.v1 v1.48.0 // indirect
 )
