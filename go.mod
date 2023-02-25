@@ -20,6 +20,6 @@ require (
 	github.com/swaggo/gin-swagger v1.0.1-0.20190110070702-0c6fcfd3c7f3
 	github.com/swaggo/swag v1.4.0
 	golang.org/x/image v0.0.0-20190910094157-69e4b8554b2a // indirect
-	golang.org/x/sys v0.0.0-20190922100055-0a153f010e69 // indirect
+	golang.org/x/sys v0.1.0 // indirect
 	gopkg.in/ini.v1 v1.48.0 // indirect
 )
